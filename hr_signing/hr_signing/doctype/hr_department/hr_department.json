@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-06 17:14:06.925621",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "staff_member",
+  "start_date",
+  "working_hours__week",
+  "column_break_kyrv",
+  "employment_type",
+  "end_date",
+  "salary_per_hour",
+  "section_break_jumo",
+  "status",
+  "column_break_noly",
+  "sign"
+ ],
+ "fields": [
+  {
+   "fieldname": "employment_type",
+   "fieldtype": "Select",
+   "label": "Employment Type",
+   "options": "Temporary\nPermanent\nProject"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_kyrv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "working_hours__week",
+   "fieldtype": "Int",
+   "label": "Working Hours / Week"
+  },
+  {
+   "fieldname": "salary_per_hour",
+   "fieldtype": "Int",
+   "label": "Salary Per Hour"
+  },
+  {
+   "fieldname": "staff_member",
+   "fieldtype": "Link",
+   "label": "Staff Member",
+   "options": "New Recruitment"
+  },
+  {
+   "fieldname": "section_break_jumo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "New\nApprove\nReject"
+  },
+  {
+   "fieldname": "sign",
+   "fieldtype": "Signature",
+   "label": "Sign"
+  },
+  {
+   "fieldname": "column_break_noly",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-09 16:26:27.656913",
+ "modified_by": "Administrator",
+ "module": "Hr Signing",
+ "name": "HR Department",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,207 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-06 15:33:53.758448",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "first_name",
+  "last_name",
+  "contact",
+  "email",
+  "column_break_zxva",
+  "middle_name",
+  "birthday",
+  "country_of_birth",
+  "citizenship",
+  "section_break_zfqe",
+  "residential",
+  "post_code",
+  "column_break_bsua",
+  "city",
+  "country",
+  "section_break_xoin",
+  "id_proof",
+  "section_break_fhhc",
+  "employment_type",
+  "start_date",
+  "working_hours__week",
+  "column_break_lnkf",
+  "status",
+  "end_date",
+  "salary_per_hour",
+  "sign_section",
+  "signature_bmox"
+ ],
+ "fields": [
+  {
+   "fieldname": "birthday",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "country_of_birth",
+   "fieldtype": "Data",
+   "label": "Country of Birth"
+  },
+  {
+   "fieldname": "citizenship",
+   "fieldtype": "Data",
+   "label": "Citizenship"
+  },
+  {
+   "fieldname": "residential",
+   "fieldtype": "Data",
+   "label": "Residential Address"
+  },
+  {
+   "fieldname": "column_break_zxva",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Phone",
+   "label": "Contact"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name"
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "post_code",
+   "fieldtype": "Int",
+   "label": "Post Code"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "section_break_zfqe",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_bsua",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_xoin",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "id_proof",
+   "fieldtype": "Attach Image",
+   "label": "Id Proof"
+  },
+  {
+   "fieldname": "section_break_fhhc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "employment_type",
+   "fieldtype": "Select",
+   "label": "Employment Type",
+   "options": "Temporary\nPermanent\nProject"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "New\nApprove\nReject"
+  },
+  {
+   "fieldname": "column_break_lnkf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "working_hours__week",
+   "fieldtype": "Int",
+   "label": "Working Hours / Week"
+  },
+  {
+   "fieldname": "salary_per_hour",
+   "fieldtype": "Int",
+   "label": "Salary Per Hour"
+  },
+  {
+   "fieldname": "sign_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "signature_bmox",
+   "fieldtype": "Signature",
+   "label": "Sign"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-09 17:05:58.934300",
+ "modified_by": "Administrator",
+ "module": "Hr Signing",
+ "name": "New Recruitment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Yellow",
+   "title": "New"
+  },
+  {
+   "color": "Green",
+   "title": "Approve"
+  },
+  {
+   "color": "Red",
+   "title": "Reject"
+  }
+ ],
+ "title_field": "first_name"
+}
