@@ -21,6 +21,18 @@ app_license = "mit"
 # 	}
 # ]
 
+
+
+doc_events = {
+    "New Recruitment": {
+        "after_save": "hr_signing.hr_signing.doctype.new_recruitment.new_recruitment.send_approval_email"
+    }
+}
+
+
+
+
+
 # Includes in <head>
 # ------------------
 

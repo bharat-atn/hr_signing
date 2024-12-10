@@ -37,22 +37,26 @@
   {
    "fieldname": "birthday",
    "fieldtype": "Date",
-   "label": "Date of Birth"
+   "label": "Date of Birth",
+   "read_only": 1
   },
   {
    "fieldname": "country_of_birth",
    "fieldtype": "Data",
-   "label": "Country of Birth"
+   "label": "Country of Birth",
+   "read_only": 1
   },
   {
    "fieldname": "citizenship",
    "fieldtype": "Data",
-   "label": "Citizenship"
+   "label": "Citizenship",
+   "read_only": 1
   },
   {
    "fieldname": "residential",
    "fieldtype": "Data",
-   "label": "Residential Address"
+   "label": "Residential Address",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_zxva",
@@ -61,42 +65,51 @@
   {
    "fieldname": "contact",
    "fieldtype": "Phone",
-   "label": "Contact"
+   "label": "Contact",
+   "read_only": 1
   },
   {
    "fieldname": "first_name",
    "fieldtype": "Data",
-   "label": "First Name"
+   "label": "First Name",
+   "read_only": 1
   },
   {
    "fieldname": "middle_name",
    "fieldtype": "Data",
-   "label": "Middle Name"
+   "label": "Middle Name",
+   "read_only": 1
   },
   {
    "fieldname": "last_name",
    "fieldtype": "Data",
-   "label": "Last Name"
+   "label": "Last Name",
+   "read_only": 1
   },
   {
    "fieldname": "email",
    "fieldtype": "Data",
-   "label": "Email"
+   "label": "Email",
+   "options": "Email",
+   "read_only": 1
   },
   {
    "fieldname": "post_code",
    "fieldtype": "Int",
-   "label": "Post Code"
+   "label": "Post Code",
+   "read_only": 1
   },
   {
    "fieldname": "city",
    "fieldtype": "Data",
-   "label": "City"
+   "label": "City",
+   "read_only": 1
   },
   {
    "fieldname": "country",
    "fieldtype": "Data",
-   "label": "Country"
+   "label": "Country",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_zfqe",
@@ -113,11 +126,13 @@
   {
    "fieldname": "id_proof",
    "fieldtype": "Attach Image",
-   "label": "Id Proof"
+   "label": "Id Proof",
+   "read_only": 1
   },
   {
    "fieldname": "section_break_fhhc",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "label": "Office Work "
   },
   {
    "fieldname": "employment_type",
@@ -167,7 +182,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-09 17:05:58.934300",
+ "modified": "2024-12-10 19:19:58.082438",
  "modified_by": "Administrator",
  "module": "Hr Signing",
  "name": "New Recruitment",
