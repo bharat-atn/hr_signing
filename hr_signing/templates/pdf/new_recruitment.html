@@ -17,12 +17,36 @@
         Recruitment Details - {{ doc.first_name }} {{ doc.last_name }}
     </div>
     <div class="section">
-        <strong>First Name:</strong> {{ doc.first_name }}<br>
-        <strong>Last Name:</strong> {{ doc.last_name }}<br>
+        <strong>First Name:</strong> {{ doc.first_name }} {{ doc.middle_name }} {{ doc.last_name }}<br>
+        
         <strong>Email:</strong> {{ doc.email }}<br>
+        
         <strong>Contact:</strong> {{ doc.contact }}<br>
-        <strong>Start Date:</strong> {{ doc.start_date }}<br>
+        
+        <strong>Date of Birth:</strong> {{ doc.birthday }}<br>
+        
+        <strong>Country of Birth:</strong> {{ doc.country_of_birth }}<br>
+        
+        <strong>Citizenship:</strong> {{ doc.citizenship }}<br>
+                
+        <strong>Residential Address:</strong> {{ doc.residential }} {{ doc.city }} {{ doc.post_code }} {{ doc.country }}<br>
+        
+        <strong>Country:</strong> {{ doc.country }}<br>
+        
         <strong>Employment Type:</strong> {{ doc.employment_type }}<br>
+        
+        <strong>Status:</strong> {{ doc.status }}<br>
+
+        <strong>Start Date:</strong> {{ doc.start_date }}<br>
+        
+        <strong>End Date:</strong> {{ doc.end_date }}<br>
+        
+        <strong>Employment Type:</strong> {{ doc.working_hours__week }}<br>
+        
+        <strong>Salary Per Hour:</strong> {{ doc.salary_per_hour }}<br>
+        <br><br><br>
+        <strong>sign:</strong> <img src="{{ doc.signature_bmox }}" alt="Image not found"> <br>
+
     </div>
 </body>
 </html>

@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-11 17:46:38.846272",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "recruitment_id",
+  "attach_latter_pdf",
+  "column_break_dwnx",
+  "candidate_sign"
+ ],
+ "fields": [
+  {
+   "fieldname": "recruitment_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Recruitment Id",
+   "options": "New Recruitment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "candidate_sign",
+   "fieldtype": "Signature",
+   "in_list_view": 1,
+   "label": "Candidate Sign",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attach_latter_pdf",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Attach Latter (PDF)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dwnx",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-11 17:54:12.450370",
+ "modified_by": "Administrator",
+ "module": "Hr Signing",
+ "name": "Document Verification",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

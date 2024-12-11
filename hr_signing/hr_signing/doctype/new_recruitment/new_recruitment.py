@@ -85,7 +85,7 @@ def send_pdf_email(record_name):
     
     # Create email subject and content
     subject = f"New Recruitment Details - {record.first_name} {record.last_name}"
-    content = f"Please find attached the details for {record.first_name} {record.last_name}."
+    content = f"Please find attached the details on the below link for {record.first_name} {record.last_name}, Your Recruitment id is : {record.name}, Use this id during Document signiture.  LINK: http://hrstaff.local:8004/verification/new"
 
     # Send email
     recipients = [record.email]
