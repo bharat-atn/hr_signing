@@ -1,56 +1,60 @@
-# # # Copyright (c) 2024, Bharat and contributors
-# # # For license information, please see license.txt
+# # Copyright (c) 2024, Bharat and contributors
+# # For license information, please see license.txt
 
-# # # import frappe
-# # from frappe.model.document import Document
+# # import frappe
+# from frappe.model.document import Document
 
 
-# # class NewRecruitment(Document):
-# # 	pass
+# class NewRecruitment(Document):
+# 	pass
+
 
 
 
 
 
 # import frappe
-# from frappe.model.document import Document
-
+# from frappe.utils.pdf import get_pdf
+# from frappe.utils import get_url
+# from frappe.core.doctype.communication.email import make
 
 # class NewRecruitment(Document):
+#     pass
 
-# 	def send_approval_email(doc, method):
-# 		"""
-# 		Send an email with a PDF attachment when the status changes to 'Approve'.
-# 		"""
-# 		print( "Email Notifcatio  is working properly ")
-# 		if doc.status == "Approve":
-# 			# Generate the PDF for the document
-# 			pdf_data = frappe.get_print(doc.doctype, doc.name, print_format="Standard", as_pdf=True)
+# @frappe.whitelist()
+# def send_pdf_email(record_name):
+#     # Fetch the record
+#     record = frappe.get_doc("New Recruitment", record_name)
 
-# 			# Define recipient, subject, and message
-# 			recipient = doc.email or "default@example.com"  # Use the email field or a default
-# 			subject = f"Approval Notification for {doc.first_name} {doc.last_name}"
-# 			message = f"""
-# 			Dear {doc.first_name} {doc.last_name},
+#     # Generate PDF
+#     pdf_content = get_pdf(frappe.render_template("hr_signing/templates/pdf/new_recruitment.html", {"doc": record}))
+    
+#     if not pdf_content:
+#         frappe.throw("Failed to generate PDF.")
+    
+#     # Create email subject and content
+#     subject = f"New Recruitment Details - {record.first_name} {record.last_name}"
+#     content = f"Please find attached the details for {record.first_name} {record.last_name}."
 
-# 			Your recruitment process has been approved. Please find the attached document for your reference.
+#     # Send email
+#     recipients = [record.email]
+    
+#     try:
+#         frappe.sendmail(
+#             recipients=recipients,
+#             subject=subject,
+#             content=content,
+#             attachments=[{
+#                 "fname": f"New_Recruitment_{record.first_name}_{record.last_name}.pdf",
+#                 "fcontent": pdf_content
+#             }]
+#         )
+#         return "Success"
+#     except Exception as e:
+#         frappe.log_error(frappe.get_traceback(), "Email Sending Failed")
+#         return f"Failed to send email: {str(e)}"
 
-# 			Regards,  
-# 			HR Team
-# 			"""
 
-# 			# Send the email with the PDF attached
-# 			frappe.sendmail(
-# 				recipients=[recipient],
-# 				subject=subject,
-# 				message=message,
-# 				attachments=[
-# 					{
-# 						"fname": f"{doc.name}.pdf",
-# 						"fcontent": pdf_data
-# 					}
-# 				]
-# 			)
 
 
 
@@ -60,40 +64,43 @@
 
 
 import frappe
-from frappe.model.document import Document
+from frappe.model.document import Document  # Add this import
+from frappe.utils.pdf import get_pdf
+from frappe.utils import get_url
+from frappe.core.doctype.communication.email import make
 
 class NewRecruitment(Document):
+    pass
 
-    def send_approval_email(self, doc, method):
-        """
-        Send an email with a PDF attachment when the status changes to 'Approve'.
-        """
-        print("Email Notification is working properly")
-        if doc.status == "Approve":
-            # Generate the PDF for the document
-            pdf_data = frappe.get_print(doc.doctype, doc.name, print_format="Standard", as_pdf=True)
+@frappe.whitelist()
+def send_pdf_email(record_name):
+    # Fetch the record
+    record = frappe.get_doc("New Recruitment", record_name)
 
-            # Define recipient, subject, and message
-            recipient = doc.email or "default@example.com"  # Use the email field or a default
-            subject = f"Approval Notification for {doc.first_name} {doc.last_name}"
-            message = f"""
-            Dear {doc.first_name} {doc.last_name},
+    # Generate PDF
+    pdf_content = get_pdf(frappe.render_template("hr_signing/templates/pdf/new_recruitment.html", {"doc": record}))
+    
+    if not pdf_content:
+        frappe.throw("Failed to generate PDF.")
+    
+    # Create email subject and content
+    subject = f"New Recruitment Details - {record.first_name} {record.last_name}"
+    content = f"Please find attached the details for {record.first_name} {record.last_name}."
 
-            Your recruitment process has been approved. Please find the attached document for your reference.
-
-            Regards,  
-            HR Team
-            """
-
-            # Send the email with the PDF attached
-            frappe.sendmail(
-                recipients=[recipient],
-                subject=subject,
-                message=message,
-                attachments=[
-                    {
-                        "fname": f"{doc.name}.pdf",
-                        "fcontent": pdf_data
-                    }
-                ]
-            )
+    # Send email
+    recipients = [record.email]
+    
+    try:
+        frappe.sendmail(
+            recipients=recipients,
+            subject=subject,
+            content=content,
+            attachments=[{
+                "fname": f"New_Recruitment_{record.first_name}_{record.last_name}.pdf",
+                "fcontent": pdf_content
+            }]
+        )
+        return "Success"
+    except Exception as e:
+        frappe.log_error(frappe.get_traceback(), "Email Sending Failed")
+        return f"Failed to send email: {str(e)}"

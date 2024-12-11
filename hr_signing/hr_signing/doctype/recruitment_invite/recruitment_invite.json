@@ -12,18 +12,22 @@
   {
    "fieldname": "name1",
    "fieldtype": "Data",
-   "label": "Name"
+   "in_list_view": 1,
+   "label": "Name",
+   "reqd": 1
   },
   {
    "fieldname": "email",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Email",
-   "options": "Email"
+   "options": "Email",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-10 18:06:20.177674",
+ "modified": "2024-12-11 11:12:33.165341",
  "modified_by": "Administrator",
  "module": "Hr Signing",
  "name": "Recruitment Invite",

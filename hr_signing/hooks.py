@@ -23,13 +23,60 @@ app_license = "mit"
 
 
 
+# doc_events = {
+#     "New Recruitment": {
+#         "after_save": "hr_signing.hr_signing.doctype.new_recruitment.new_recruitment.send_approval_email"
+#     }
+# }
+
+
+
+
+# doc_events = {
+#     "New Recruitment": {
+#         "after_save": "hr_signing.hr_signing.doctype.new_recruitment.new_recruitment.send_approval_email_wrapper"
+#     }
+# }
+
+
+
+
+# import frappe
+# from hr_signing.hr_signing.doctype.new_recruitment.new_recruitment import NewRecruitment
+
+# def send_approval_email_wrapper(doc, method):
+#     recruitment = NewRecruitment()
+#     recruitment.send_approval_email(doc, method)
+
+
+
+
+
+# from hr_signing.hr_signing.doctype.new_recruitment.new_recruitment import NewRecruitment
+
+# def send_approval_email_wrapper(doc, method):
+#     recruitment = NewRecruitment()
+#     recruitment.send_approval_email(doc, method)
+
+# doc_events = {
+#     "New Recruitment": {
+#         "after_save": "hr_signing.hr_signing.doctype.new_recruitment.new_recruitment.send_approval_email_wrapper"
+#     }
+# }
+
+
+
+from hr_signing.hr_signing.doctype.new_recruitment.new_recruitment import NewRecruitment
+
+def send_approval_email_wrapper(doc, method):
+    recruitment = NewRecruitment()
+    recruitment.send_approval_email(doc, method)
+
 doc_events = {
     "New Recruitment": {
-        "after_save": "hr_signing.hr_signing.doctype.new_recruitment.new_recruitment.send_approval_email"
+        "after_save": "hr_signing.hr_signing.doctype.new_recruitment.new_recruitment.send_approval_email_wrapper"
     }
 }
-
-
 
 
 

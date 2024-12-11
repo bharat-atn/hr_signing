@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .section {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Recruitment Details - {{ doc.first_name }} {{ doc.last_name }}
+    </div>
+    <div class="section">
+        <strong>First Name:</strong> {{ doc.first_name }}<br>
+        <strong>Last Name:</strong> {{ doc.last_name }}<br>
+        <strong>Email:</strong> {{ doc.email }}<br>
+        <strong>Contact:</strong> {{ doc.contact }}<br>
+        <strong>Start Date:</strong> {{ doc.start_date }}<br>
+        <strong>Employment Type:</strong> {{ doc.employment_type }}<br>
+    </div>
+</body>
+</html>
