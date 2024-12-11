@@ -8,7 +8,15 @@
   "recruitment_id",
   "attach_latter_pdf",
   "column_break_dwnx",
-  "candidate_sign"
+  "candidate_sign",
+  "section_break_rzcx",
+  "first_name",
+  "last_name",
+  "email",
+  "column_break_njpk",
+  "middle_name",
+  "contact",
+  "employement_type"
  ],
  "fields": [
   {
@@ -22,25 +30,71 @@
   {
    "fieldname": "candidate_sign",
    "fieldtype": "Signature",
-   "in_list_view": 1,
    "label": "Candidate Sign",
    "reqd": 1
   },
   {
    "fieldname": "attach_latter_pdf",
    "fieldtype": "Attach",
-   "in_list_view": 1,
    "label": "Attach Latter (PDF)",
    "reqd": 1
   },
   {
    "fieldname": "column_break_dwnx",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_rzcx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "recruitment_id.first_name",
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name"
+  },
+  {
+   "fetch_from": "recruitment_id.last_name",
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Last Name"
+  },
+  {
+   "fieldname": "column_break_njpk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "recruitment_id.middle_name",
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name"
+  },
+  {
+   "fetch_from": "recruitment_id.email",
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "options": "Email"
+  },
+  {
+   "fetch_from": "recruitment_id.contact",
+   "fieldname": "contact",
+   "fieldtype": "Phone",
+   "label": "Contact"
+  },
+  {
+   "fetch_from": "recruitment_id.employment_type",
+   "fieldname": "employement_type",
+   "fieldtype": "Select",
+   "label": "Employement Type",
+   "options": "Temporary\nPermanent\nProject"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-11 17:54:12.450370",
+ "modified": "2024-12-11 18:13:33.865622",
  "modified_by": "Administrator",
  "module": "Hr Signing",
  "name": "Document Verification",

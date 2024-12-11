@@ -182,7 +182,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-10 19:19:58.082438",
+ "modified": "2024-12-11 18:04:10.321398",
  "modified_by": "Administrator",
  "module": "Hr Signing",
  "name": "New Recruitment",
@@ -201,7 +201,6 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [
@@ -217,6 +216,5 @@
    "color": "Red",
    "title": "Reject"
   }
- ],
- "title_field": "first_name"
+ ]
 }
