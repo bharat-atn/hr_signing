@@ -64,7 +64,7 @@
 
 
 import frappe
-from frappe.model.document import Document  # Add this import
+from frappe.model.document import Document  
 from frappe.utils.pdf import get_pdf
 from frappe.utils import get_url
 from frappe.core.doctype.communication.email import make
@@ -98,7 +98,8 @@ def send_pdf_email(record_name):
             attachments=[{
                 "fname": f"New_Recruitment_{record.first_name}_{record.last_name}.pdf",
                 "fcontent": pdf_content
-            }]
+            }],
+            now=True
         )
         return "Success"
     except Exception as e:

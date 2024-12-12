@@ -71,6 +71,7 @@
   {
    "fieldname": "first_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "First Name",
    "read_only": 1
   },
@@ -83,12 +84,14 @@
   {
    "fieldname": "last_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Last Name",
    "read_only": 1
   },
   {
    "fieldname": "email",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Email",
    "options": "Email",
    "read_only": 1
@@ -182,7 +185,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-12-11 18:04:10.321398",
+ "modified": "2024-12-12 10:47:14.011305",
  "modified_by": "Administrator",
  "module": "Hr Signing",
  "name": "New Recruitment",
